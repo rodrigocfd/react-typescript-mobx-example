@@ -1,12 +1,9 @@
 import React from 'react';
 
-import {StoreContext} from '../store/context';
+import {useMobxStore} from '../store/context';
 
 const Cities: React.FC = () => {
-	const store = React.useContext(StoreContext);
-	if (!store) {
-		throw Error('Store is null, something went wrong.');
-	}
+	const store = useMobxStore();
 
 	return (
 		<ul>
