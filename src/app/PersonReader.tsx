@@ -3,16 +3,12 @@ import {useObserver} from 'mobx-react-lite';
 
 import {useMobxStore} from '../store/context';
 
-const Cities: React.FC = () => {
+const PersonReader: React.FC = () => {
 	const store = useMobxStore();
 
 	return useObserver(() => (
-		<ul>
-			{store.allCities.map((city: string) =>
-				<li>{city}</li>
-			)}
-		</ul>
+		<div>{store.person.name}, {store.person.year}</div>
 	));
 };
 
-export default Cities;
+export default PersonReader;

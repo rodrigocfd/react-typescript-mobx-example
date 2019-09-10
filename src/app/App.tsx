@@ -1,14 +1,17 @@
 import React from 'react';
 
-import Cities from './Cities';
 import {StoreProvider} from '../store/context';
+import NameReader from './NameReader';
+import PersonReader from './PersonReader';
+import NameWriter from './NameWriter';
 
 const App: React.FC = () => {
 	return (
 		<StoreProvider>
 			<div>
-				<h1>Cities</h1>
-				<Cities />
+				<NameReader />
+				<PersonReader />
+				<NameWriter />
 			</div>
 		</StoreProvider>
 	);
