@@ -5,5 +5,5 @@ export function createPerson() {
 	}
 };
 
-export interface Person
-	extends ReturnType<typeof createPerson> { };
+interface Person extends ReturnType<typeof createPerson> { };
+export default Person;

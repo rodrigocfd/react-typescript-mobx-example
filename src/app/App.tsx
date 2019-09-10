@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StoreProvider} from '../store/context';
+import {MobxStoreProvider} from '../store/useMobxStore';
 import NameReader from './NameReader';
 import NameWriter from './NameWriter';
 import PersonReaderName from './PersonReaderName';
@@ -9,7 +9,7 @@ import PersonWriter from './PersonWriter';
 
 const App: React.FC = () => {
 	return (
-		<StoreProvider>
+		<MobxStoreProvider>
 			<div>
 				<NameReader />
 				<NameWriter />
@@ -17,7 +17,7 @@ const App: React.FC = () => {
 				<PersonReaderYear />
 				<PersonWriter />
 			</div>
-		</StoreProvider>
+		</MobxStoreProvider>
 	);
 }
 

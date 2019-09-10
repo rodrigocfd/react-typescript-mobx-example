@@ -2,7 +2,10 @@ import {observable} from 'mobx';
 
 import {createPerson} from './Person';
 
-export function createStore() {
+/**
+ * Application central MobX store.
+ */
+export function createMobxStore() {
 	const name = observable.box('Foo');
 	const person = observable(createPerson());
 
@@ -13,4 +16,7 @@ export function createStore() {
 	};
 };
 
-export type TStore = ReturnType<typeof createStore>;
+/**
+ * The type of our MobX store.
+ */
+export type TMobxStore = ReturnType<typeof createMobxStore>;
