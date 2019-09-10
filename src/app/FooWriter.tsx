@@ -3,12 +3,16 @@ import {useObserver} from 'mobx-react-lite';
 
 import useMobxStore from '../store/useMobxStore';
 
-const NameReader: React.FC = () => {
+const FooWriter: React.FC = () => {
 	const store = useMobxStore();
 
 	return useObserver(() => (
-		<div>{store.name}</div>
+		<div>
+			Foo
+			<input type="text" value={store.foo}
+				onChange={e => store.foo = e.target.value} />
+		</div>
 	));
 };
 
-export default NameReader;
+export default FooWriter;

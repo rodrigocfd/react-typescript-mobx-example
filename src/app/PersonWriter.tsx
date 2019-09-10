@@ -11,7 +11,7 @@ const PersonWriter: React.FC = () => {
 			Person
 			<input type="text" value={store.person.name}
 				onChange={e => store.person.name = e.target.value} />
-			<input type="text" value={store.person.year}
+			<input type="number" value={store.person.year}
 				onChange={e => store.person.year = +e.target.value} />
 		</div>
 	));
