@@ -10,9 +10,9 @@ const PersonWriter: React.FC = () => {
 		<div>
 			Person
 			<input type="text" value={store.person.name}
-				onChange={e => store.person = {...store.person, name: e.target.value}} />
+				onChange={e => store.person.name = e.target.value} />
 			<input type="text" value={store.person.year}
-				onChange={e => store.person = {...store.person, year: +e.target.value}} />
+				onChange={e => store.person.year = +e.target.value} />
 		</div>
 	));
 };
