@@ -3,14 +3,16 @@ import {observable} from 'mobx';
 import {createPerson, Person} from './Person';
 
 export function createStore() {
-	const _name = observable.box('Foo');
-	const _person = observable.box(createPerson());
+	const store = observable({
+		name: 'Foo',
+		person: createPerson()
+	});
 
 	return {
-		get name() { return _name.get(); },
-		set name(n: string) { _name.set(n); },
-		get person(): Person { return _person.get(); },
-		set person(p: Person) { _person.set(p); }
+		get name() { return store.name; },
+		set name(n: string) { store.name = n; },
+		get person(): Person { return store.person; },
+		set person(p: Person) { store.person = p; }
 	};
 };
 

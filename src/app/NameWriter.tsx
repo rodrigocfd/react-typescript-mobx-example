@@ -8,10 +8,9 @@ const NameWriter: React.FC = () => {
 
 	return useObserver(() => (
 		<div>
+			Name
 			<input type="text" value={store.name}
 				onChange={e => store.name = e.target.value} />
-			<input type="text" value={store.person.name}
-				onChange={e => store.person = {...store.person, name: e.target.value}} />
 		</div>
 	));
 };
