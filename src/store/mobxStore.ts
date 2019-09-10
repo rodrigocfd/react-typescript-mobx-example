@@ -6,13 +6,13 @@ import {createPerson} from './Person';
  * Application central MobX store.
  */
 export function createMobxStore() {
-	const foo = observable.box('Foo123');
-	const person = observable(createPerson());
+	const foo = observable.box('Foo123'); // storing simple string
+	const person = observable(createPerson()); // storing object
 
 	return {
-		get foo() { return foo.get(); },
+		get foo() { return foo.get(); }, // getter/setter to simple string
 		set foo(n: string) { foo.set(n); },
-		person
+		person // direct access to Person object
 	};
 };
 

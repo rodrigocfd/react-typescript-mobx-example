@@ -9,7 +9,7 @@ const StoreContext = React.createContext<TMobxStore | null>(null);
  * Should wrap entire application.
  */
 export const MobxStoreProvider: React.FC = p => {
-	const mobxStore = useLocalStore(createMobxStore);
+	const mobxStore = useLocalStore(createMobxStore); // already calls useState()
 	return (
 		<StoreContext.Provider value={mobxStore}>
 			{p.children}
@@ -21,7 +21,7 @@ export const MobxStoreProvider: React.FC = p => {
  * Hook to provide access to MobX store.
  */
 function useMobxStore(): TMobxStore {
-	const mobxStore = React.useContext(StoreContext);
+	const mobxStore = React.useContext(StoreContext); // retrieve from context
 	if (!mobxStore) {
 		throw Error('MobX store is null, something went wrong.');
 	}
