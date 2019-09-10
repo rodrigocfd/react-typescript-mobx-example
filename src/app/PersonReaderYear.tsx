@@ -3,12 +3,13 @@ import {useObserver} from 'mobx-react-lite';
 
 import {useMobxStore} from '../store/context';
 
-const PersonReader: React.FC = () => {
+const PersonReaderYear: React.FC = () => {
 	const store = useMobxStore();
 
+	// Will render when any member of Person changes.
 	return useObserver(() => (
-		<div>{store.person.name}, {store.person.year}</div>
+		<div>Person year: {store.person.year}</div>
 	));
 };
 
-export default PersonReader;
+export default PersonReaderYear;

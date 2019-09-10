@@ -3,13 +3,13 @@ import {useObserver} from 'mobx-react-lite';
 
 import {useMobxStore} from '../store/context';
 
-const NameReader: React.FC = () => {
+const PersonReaderName: React.FC = () => {
 	const store = useMobxStore();
 
-	// Will render only when store "name" changes.
+	// Will render when any member of Person changes.
 	return useObserver(() => (
-		<div>{store.name}</div>
+		<div>Person name: {store.person.name}</div>
 	));
 };
 
-export default NameReader;
+export default PersonReaderName;

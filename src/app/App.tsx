@@ -3,7 +3,8 @@ import React from 'react';
 import {StoreProvider} from '../store/context';
 import NameReader from './NameReader';
 import NameWriter from './NameWriter';
-import PersonReader from './PersonReader';
+import PersonReaderName from './PersonReaderName';
+import PersonReaderYear from './PersonReaderYear';
 import PersonWriter from './PersonWriter';
 
 const App: React.FC = () => {
@@ -12,7 +13,8 @@ const App: React.FC = () => {
 			<div>
 				<NameReader />
 				<NameWriter />
-				<PersonReader />
+				<PersonReaderName />
+				<PersonReaderYear />
 				<PersonWriter />
 			</div>
 		</StoreProvider>
