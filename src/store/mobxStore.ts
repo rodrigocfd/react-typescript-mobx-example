@@ -19,4 +19,5 @@ export function createMobxStore() {
 /**
  * The type of our MobX store.
  */
-export type TMobxStore = ReturnType<typeof createMobxStore>;
+export interface IMobxStore
+	extends ReturnType<typeof createMobxStore> { };

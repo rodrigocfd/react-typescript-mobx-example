@@ -1,9 +1,12 @@
 import React from 'react';
 import {useLocalStore} from 'mobx-react-lite';
 
-import {createMobxStore, TMobxStore} from './mobxStore';
+import {createMobxStore, IMobxStore} from './mobxStore';
 
-const StoreContext = React.createContext<TMobxStore | null>(null);
+/**
+ * Context to keep the store object.
+ */
+const StoreContext = React.createContext<IMobxStore | null>(null);
 
 /**
  * Should wrap entire application.
@@ -20,7 +23,7 @@ export const MobxStoreProvider: React.FC = p => {
 /**
  * Hook to provide access to MobX store.
  */
-function useMobxStore(): TMobxStore {
+function useMobxStore(): IMobxStore {
 	const mobxStore = React.useContext(StoreContext); // retrieve from context
 	if (!mobxStore) {
 		throw Error('MobX store is null, something went wrong.');
