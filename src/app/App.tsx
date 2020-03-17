@@ -1,23 +1,17 @@
 import React from 'react';
 
-import {MobxStoreProvider} from '../store/useMobxStore';
-import FooReader from './FooReader';
-import FooWriter from './FooWriter';
-import PersonReaderName from './PersonReaderName';
-import PersonReaderYear from './PersonReaderYear';
-import PersonWriter from './PersonWriter';
+import {MobxProvider} from './MobX';
+import Inputs from './Inputs';
+import TextGreen from './TextGreen';
+import TextBlue from './TextBlue';
 
-const App: React.FC = () => {
+function App() {
 	return (
-		<MobxStoreProvider>
-			<div>
-				<FooReader />
-				<FooWriter />
-				<PersonReaderName />
-				<PersonReaderYear />
-				<PersonWriter />
-			</div>
-		</MobxStoreProvider>
+		<MobxProvider>
+			<Inputs />
+			<TextGreen />
+			<TextBlue />
+		</MobxProvider>
 	);
 }
 
