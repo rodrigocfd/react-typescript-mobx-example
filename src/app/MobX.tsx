@@ -4,8 +4,10 @@ import * as MobxReactLite from 'mobx-react-lite';
 // MobX store to be kept into app context.
 // This is where you place your state data.
 const initialState = {
-	name: '',
-	city: ''
+	deep: {
+		name: '',
+		city: ''
+	}
 };
 
 // Global app context.

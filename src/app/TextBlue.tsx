@@ -8,7 +8,7 @@ function TextBlue() {
 	const store = useMobx();
 
 	return useObserver(() => (
-		<div style={{color: 'blue'}}>City: {store.city}</div>
+		<div style={{color: 'blue'}}>City: {store.deep.city}</div>
 	));
 }
 

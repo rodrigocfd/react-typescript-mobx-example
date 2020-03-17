@@ -8,7 +8,7 @@ function TextGreen() {
 	const store = useMobx();
 
 	return useObserver(() => (
-		<div style={{color: 'green'}}>Name: {store.name}</div>
+		<div style={{color: 'green'}}>Name: {store.deep.name}</div>
 	));
 }
 
