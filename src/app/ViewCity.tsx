@@ -1,7 +1,7 @@
 import React from 'react';
 import {useObserver} from 'mobx-react-lite';
 
-import {useMobx} from './MobX';
+import useMobx from './useMobx';
 
 function ViewCity() {
 	console.log('CITY');

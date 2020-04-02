@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MobxProvider} from './MobX';
+import {MobxContext, createMobxStore} from './useMobx';
 import Inputs from './Inputs';
 import ViewName from './ViewName';
 import ViewSurname from './ViewSurname';
@@ -8,12 +8,12 @@ import ViewCity from './ViewCity';
 
 function App() {
 	return (
-		<MobxProvider>
+		<MobxContext.Provider value={createMobxStore()}>
 			<Inputs />
 			<ViewName />
 			<ViewSurname />
 			<ViewCity />
-		</MobxProvider>
+		</MobxContext.Provider>
 	);
 }
 
