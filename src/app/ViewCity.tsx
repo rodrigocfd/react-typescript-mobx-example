@@ -3,13 +3,13 @@ import {useObserver} from 'mobx-react-lite';
 
 import {useMobx} from './MobX';
 
-function TextBlue() {
-	console.log('BLUE');
+function ViewCity() {
+	console.log('CITY');
 	const store = useMobx();
 
 	return useObserver(() => (
-		<div style={{color: 'blue'}}>City: {store.deep.city}</div>
+		<div style={{color: 'blue'}}>City: {store.city}</div>
 	));
 }
 
-export default TextBlue;
+export default ViewCity;

@@ -2,15 +2,17 @@ import React from 'react';
 
 import {MobxProvider} from './MobX';
 import Inputs from './Inputs';
-import TextGreen from './TextGreen';
-import TextBlue from './TextBlue';
+import ViewName from './ViewName';
+import ViewSurname from './ViewSurname';
+import ViewCity from './ViewCity';
 
 function App() {
 	return (
 		<MobxProvider>
 			<Inputs />
-			<TextGreen />
-			<TextBlue />
+			<ViewName />
+			<ViewSurname />
+			<ViewCity />
 		</MobxProvider>
 	);
 }

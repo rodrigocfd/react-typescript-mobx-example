@@ -3,13 +3,13 @@ import {useObserver} from 'mobx-react-lite';
 
 import {useMobx} from './MobX';
 
-function TextGreen() {
-	console.log('GREEN');
+function ViewName() {
+	console.log('NAME');
 	const store = useMobx();
 
 	return useObserver(() => (
-		<div style={{color: 'green'}}>Name: {store.deep.name}</div>
+		<div style={{color: 'green'}}>Name: {store.person.name}</div>
 	));
 }
 
-export default TextGreen;
+export default ViewName;

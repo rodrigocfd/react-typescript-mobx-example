@@ -4,10 +4,11 @@ import * as MobxReactLite from 'mobx-react-lite';
 // MobX store to be kept into app context.
 // This is where you place your state data.
 const initialState = {
-	deep: {
-		name: '',
-		city: ''
-	}
+	person: {
+		name: '', // nested values work as well
+		surname: ''
+	},
+	city: ''
 };
 
 // Global app context.
